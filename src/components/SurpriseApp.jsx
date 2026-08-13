@@ -7,7 +7,7 @@ export default function SurpriseApp() {
   const fetchQuote = async () => {
     setLoading(true)
     try {
-      const res = await fetch('/letters/101_quotes_for_yamiki.md')
+      const res = await fetch(`${import.meta.env.BASE_URL}letters/101_quotes_for_yamiki.md`)
       const text = await res.text()
       const lines = text.split('\n').filter(l => l.trim().length > 10)
       const randomQuote = lines[Math.floor(Math.random() * lines.length)]

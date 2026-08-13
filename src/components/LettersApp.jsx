@@ -17,7 +17,7 @@ export default function LettersApp() {
     setActiveLetter(file)
     setIsOpening(false)
     try {
-      const res = await fetch(`/letters/${file}`)
+      const res = await fetch(`${import.meta.env.BASE_URL}letters/${file}`)
       const text = await res.text()
       setLetterContent(text)
     } catch (e) {

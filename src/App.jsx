@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="app-container">
       {/* Background Audio */}
-      <audio ref={audioRef} src={`/music/${currentSong}`} loop autoPlay={started} />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}music/${currentSong}`} loop autoPlay={started} />
 
       {/* Welcome Screen */}
       <div className={`welcome-screen ${started ? 'fade-out' : ''}`}>

@@ -28,7 +28,7 @@ export default function PhotosApp() {
           boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
         }}>
           <img 
-            src={`/images/${img}`} 
+            src={`${import.meta.env.BASE_URL}images/${img}`} 
             alt={img} 
             style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }} 
           />
